@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MK's Karakkunnu | Education News</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172b4d;
+}
+
+.topbar {
+  background: #102a43;
+  color: white;
+  padding: 10px 6%;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background: white;
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  background: #102a43;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.brand h1 {
+  font-size: 21px;
+}
+
+.brand p {
+  color: #718096;
+  font-size: 11px;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+nav {
+  background: white;
+  padding: 14px 6%;
+  border-bottom: 1px solid #e5eaf0;
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: #42566e;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #1769aa;
+}
+
+main {
+  width: 88%;
+  max-width: 1150px;
+  margin: 28px auto;
+}
+
+.ticker {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.ticker strong {
+  background: #f4b942;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.hero {
+  background: linear-gradient(110deg, #102a43, #3479a8);
+  color: white;
+  padding: 45px 35px;
+  border-radius: 15px;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero small {
+  letter-spacing: 2px;
+  color: #c5e1f5;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin: 18px 0;
+  max-width: 600px;
+}
+
+.hero p {
+  color: #d8e7f3;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.section-title {
+  margin: 35px 0 18px;
+}
+
+.section-title h2 {
+  font-size: 24px;
+}
+
+.section-title p {
+  color: #718096;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5eaf0;
+}
+
+.card-image {
+  height: 130px;
+  background: linear-gradient(135deg, #dbe9f4, #91b5cf);
+  display: flex;
+  align-items: end;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #102a43;
+}
+
+.card-content {
+  padding: 18px;
+}
+
+.tag {
+  color: #1769aa;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  margin: 12px 0;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.card p {
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.meta {
+  color: #91a0b0;
+  font-size: 10px;
+  margin-top: 15px;
+}
+
+.notice-area {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.notice, .social {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+}
+
+.notice h3, .social h3 {
+  margin-bottom: 15px;
+}
+
+.notice p {
+  padding: 13px 0;
+  border-top: 1px solid #e5eaf0;
+  font-size: 13px;
+}
+
+.social {
+  background: #102a43;
+  color: white;
+}
+
+.social p {
+  color: #d0deea;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 12px 0 20px;
+}
+
+.instagram {
+  display: inline-block;
+  background: white;
+  color: #102a43;
+  padding: 12px 18px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+footer {
+  background: #0b2035;
+  color: #c6d5e3;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  font-size: 12px;
+}
+
+@media(max-width:800px) {
+  .news {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .notice-area {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:550px) {
+  header {
+    padding: 18px 5%;
+  }
+  .brand h1 {
+    font-size: 17px;
+  }
+  main {
+    width: 92%;
+  }
+  .hero h2 {
+    font-size: 27px;
+  }
+  .news {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <span>MK'S KARAKKUNNU • EDUCATION DESK</span>
+  <span id="date"></span>
+</div>
+
+<header>
+  <div class="brand">
+    <div class="logo">MK</div>
+    <div>
+      <h1>MK's Karakkunnu</h1>
+      <p>EDUCATION NEWS & UPDATES</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#latest">Latest News</a>
+  <a href="#campus">Campus</a>
+  <a href="#notices">Notices</a>
+  <a href="#about">About</a>
+</nav>
+
+<main>
+
+  <div class="ticker">
+    <strong>TOP UPDATE</strong>
+    Stay informed with academic news, campus announcements and student opportunities.
+  </div>
+
+  <section class="hero">
+    <small>THE EDUCATION BULLETIN</small>
+    <h2>Knowledge Today. Opportunities Tomorrow.</h2>
+    <p>
+      Your place for education news, academic updates,
+      campus highlights and important student announcements.
+    </p>
+  </section>
+
+  <section id="latest">
+    <div class="section-title">
+      <h2>Latest Education Stories</h2>
+      <p>Explore updates from the world of learning.</p>
+    </div>
+
+    <div class="news">
+
+      <article class="card">
+        <div class="card-image">LEARNING & EDUCATION</div>
+        <div class="card-content">
+          <span class="tag">Education</span>
+          <h3>Building Strong Study Habits</h3>
+          <p>Practical ways students can organise their time, revise effectively and develop curiosity.</p>
+          <div class="meta">STUDENT LEARNING • 4 MIN READ</div>
+        </div>
+      </article>
+
+      <article class="card" id="campus">
+        <div class="card-image">CAMPUS & COMMUNITY</div>
+        <div class="card-content">
+          <span class="tag">Campus</span>
+          <h3>Why Student Clubs Matter</h3>
+          <p>Student groups create opportunities for teamwork, creativity and shared experiences.</p>
+          <div class="meta">CAMPUS LIFE • 3 MIN READ</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">EXAMS & PREPARATION</div>
+        <div class="card-content">
+          <span class="tag">Exams</span>
+          <h3>A Better Approach to Exam Preparation</h3>
+          <p>Set realistic goals, practise regularly and use feedback to strengthen understanding.</p>
+          <div class="meta">STUDY SKILLS • 5 MIN READ</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">SKILLS & OPPORTUNITIES</div>
+        <div class="card-content">
+          <span class="tag">Opportunities</span>
+          <h3>Learning Skills Beyond the Classroom</h3>
+          <p>Communication, digital literacy and collaboration support students in many fields.</p>
+          <div class="meta">STUDENT DEVELOPMENT • 4 MIN READ</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">READING & RESEARCH</div>
+        <div class="card-content">
+          <span class="tag">Education</span>
+          <h3>The Importance of Reading</h3>
+          <p>Books and reliable research help learners build knowledge and think critically.</p>
+          <div class="meta">READING • 3 MIN READ</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">STUDENT ACHIEVEMENTS</div>
+        <div class="card-content">
+          <span class="tag">Campus</span>
+          <h3>Celebrating Student Achievements</h3>
+          <p>Every achievement reflects practice, encouragement and teamwork.</p>
+          <div class="meta">COMMUNITY • 2 MIN READ</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="notice-area">
+
+    <div class="notice" id="notices">
+      <h3>Announcements & Notices</h3>
+      <p>Academic calendar updates</p>
+      <p>Upcoming student programmes</p>
+      <p>Competitions and learning opportunities</p>
+      <p>Campus news and announcements</p>
+    </div>
+
+    <div class="social" id="about">
+      <h3>Follow Our Updates</h3>
+      <p>
+        Visit the MK's Karakkunnu Instagram page
+        for social updates and announcements.
+      </p>
+
+      <a class="instagram"
+         href="https://www.instagram.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+         Instagram ↗
+      </a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> MK's Karakkunnu | Education News
+</footer>
+
+<script>
+document.getElementById("date").textContent =
+  new Date().toLocaleDateString("en-IN", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    year: "numeric"
+  });
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
